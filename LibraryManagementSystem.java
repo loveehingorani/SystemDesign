@@ -6,11 +6,11 @@ import java.util.List;
 
 class LibraryManagementSystem {
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    System.out.println("dccw");
+        System.out.println("dccw");
 
-}
+    }
 
 }
 
@@ -34,7 +34,10 @@ class Book {
     BookStatus bookStatus;
 }
 public enum BookStatus {
-	ISSUED, AVAILABLE, RESERVED, LOST
+    ISSUED,
+    AVAILABLE,
+    RESERVED,
+    LOST
 }
 
 
@@ -45,14 +48,14 @@ class Member extends User {
     String barcode;
     Search search;
     int fine;
-    List<Booking> bookings = new ArrayList<>();
-    List<Reservation> reservations = new ArrayList<>();
+    List < Booking > bookings = new ArrayList < > ();
+    List < Reservation > reservations = new ArrayList < > ();
     BookingService bookingService;
 
 }
-class BookingService{
+class BookingService {
 
-    public void issueBook (Booking booking) {}
+    public void issueBook(Booking booking) {}
 
     public void reserveBook(Reservation reservation) {}
 
@@ -67,21 +70,21 @@ class Admin extends User {
 
     Search search;
 
-    public List<Booking> getAllBookingsOfMember(int id) {}
+    public List < Booking > getAllBookingsOfMember(int id) {}
 
     public void addBook(Book book) {}
 
     public void removeBook(int bookId) {}
     public void editBook(Book book) {}
     public Member getMemberDetailsFromBookId(int bookId) {}
-    public List<Booking> getBookingDetailsFromBookId (int bookId) {}
+    public List < Booking > getBookingDetailsFromBookId(int bookId) {}
 }
 
 
 
 class Search {
 
-    public List<Book> search(String searchKey) {}
+    public List < Book > search(String searchKey) {}
 
 }
 
@@ -102,14 +105,15 @@ class Booking {
 
 
 class Reservation {
-   int memberId;
-   int bookId;
-   Date reservedDate;
+    int memberId;
+    int bookId;
+    Date reservedDate;
 }
 
 enum BookingStatus {
 
-    OPEN, CLOSED
+    OPEN,
+    CLOSED
 
 }
 
@@ -123,7 +127,8 @@ class NotificationFactory {
 
 enum NotificationType {
 
-    SMS, EMAIL
+    SMS,
+    EMAIL
 
 }
 
@@ -148,4 +153,3 @@ class emailNotifcation implements Notification {
     public void sendNotification() {}
 
 }
-
