@@ -7,14 +7,12 @@ import java.util.List;
 class LibraryManagementSystem {
 
     public static void main(String[] args) {
-
-        System.out.println("dccw");
+        
+        //driver code
 
     }
 
 }
-
-
 
 class User {
     int id;
@@ -33,15 +31,13 @@ class Book {
     String rackNumber;
     BookStatus bookStatus;
 }
+
 public enum BookStatus {
     ISSUED,
     AVAILABLE,
     RESERVED,
     LOST
 }
-
-
-
 
 class Member extends User {
     int issueCount;
@@ -53,6 +49,7 @@ class Member extends User {
     BookingService bookingService;
 
 }
+
 class BookingService {
 
     public void issueBook(Booking booking) {}
@@ -71,9 +68,7 @@ class Admin extends User {
     Search search;
 
     public List < Booking > getAllBookingsOfMember(int id) {}
-
     public void addBook(Book book) {}
-
     public void removeBook(int bookId) {}
     public void editBook(Book book) {}
     public Member getMemberDetailsFromBookId(int bookId) {}
@@ -102,8 +97,6 @@ class Booking {
 }
 
 
-
-
 class Reservation {
     int memberId;
     int bookId;
@@ -117,11 +110,11 @@ enum BookingStatus {
 
 }
 
-
+// factory design pattern for notifications
 
 class NotificationFactory {
 
-    public getNotification(NotificationType notificationType) {}
+    public Notification getNotification(NotificationType notificationType) {}
 
 }
 
