@@ -66,7 +66,8 @@ class BookingService {
 class Admin extends User {
 
     Search search;
-
+    BookingService bookingService;
+    
     public List < Booking > getAllBookingsOfMember(int id) {}
     public void addBook(Book book) {}
     public void removeBook(int bookId) {}
